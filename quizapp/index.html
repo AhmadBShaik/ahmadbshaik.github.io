@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">    
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    
+    <link rel="stylesheet" href="styles/styles.css">
+</head>
+<body">
+    <div id="name">
+        <div class="center">
+            <div class="card card_style">
+                <div class="card-body">
+                    <form>
+                        <fieldset>
+                        <legend><b>Enter your name</b></legend>
+                        <div class="mb-3">
+                            
+                            <input type="text" class="form-control" id="uname" placeholder="Name">
+                          </div>
+                          <a  id="nameBtn" class="btn btn-primary form-control login_margin">Attempt Now</a>
+                        </fieldset>
+                    </form>
+                </div>
+            </div>
+        </div>    
+    </div>
+
+
+    <div id="content">
+        <div class="container questiontop">
+            <span id="questionTopUsername"></span>
+            <span style="float: right;">time left&nbsp;&nbsp;<span id="timer"></span> </span>
+        </div>
+        <div class="container question">
+            <form>
+
+                <p id="question"></p> 
+
+                <div id="options">
+                    <p>
+                        <input type="radio" name="answer" id="option_a" name="answer" value="a">
+                        <label id="option_a_label" for="option_a"></label>
+                    </p>
+                    <p>
+                        <input type="radio" name="answer" id="option_b" name="answer" value="b">
+                        <label id="option_b_label" for="option_b"></label>
+                    </p>
+        
+                    <p>
+                        <input type="radio" name="answer" id="option_c" name="answer" value="c">
+                        <label id="option_c_label" for="option_c"></label>
+                    </p>
+                    <p>
+                        <input type="radio" name="answer" id="option_d" name="answer" value="d">
+                        <label id="option_d_label" for="option_d"></label>
+                    </p>
+        
+                </div>
+                
+
+                <a href="#" class="btn btn-warning" id="prev">previous</a>
+                &nbsp;
+                <a href="#" class="btn btn-warning" id="next">next</a>
+            </form>
+
+        </div>
+
+        <div class="container questionnav">
+            <div id="qnav">
+                <a id="qnav0" class="btn" style="margin-right: 5px;"></a>
+            </div>
+        </div>
+        
+    </div>
+    <div id="score">
+        <div class="center">
+            <div class="card card_style">
+                <div class="card-body">
+                    <span id="examScore"></span>
+                </div>
+            </div>
+        </div>    
+    </div>
+
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+<script src="js/index.js"></script>
+</html>
