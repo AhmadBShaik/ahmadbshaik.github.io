@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ethereum Unit Converter</title>
+    <link rel="stylesheet" href="styles/styles.css">
+</head>
+<body>
+     <div class="container">
+        <header>
+            <div class="header">
+                <h1>Ethereum Unit Converter</h1>
+                <hr class="seperator">
+                <button class="inactive-btn" id="simple-btn">Simple</button>
+                <button class="inactive-btn" id="extended-btn">Extended</button>
+            </div>
+        </header>
+        <main>
+            <article>
+                <div class="form-wrapper">
+                    <form action="">
+                        <div id="simple-form" class="simple-form">
+
+                            <div class="input_field simple">
+                                <label for="wei-simple">Wei</label>
+                                <input type="number" class="input" autocomplete="off" min="0" id="wei-simple" placeholder="Wei">
+                            </div>
+                            
+                            <div class="input_field simple">
+                                <label for="gwei-simple">Gwei</label>
+                                <input type="number" class="input" autocomplete="off" min="0" id="gwei-simple" placeholder="Gwei">
+                            </div>
+                            
+                            
+                            <div class="input_field simple">
+                                <label for="ether-simple">Ether</label>
+                                <input type="number" class="input" autocomplete="off" min="0" id="ether-simple" placeholder="Ether">
+                            </div>
+                        </div>
+                        
+                        
+                        <div id="extended-form">
+
+                            <div class="input_field">
+                                <label for="wei">
+                                    Wei 
+                                    <span class="factor">(factor: 0)</span>
+                                </label>
+                                <input type="number" class="input" autocomplete="off" min="0" id="wei" placeholder="Wei">
+                            </div>
+                            
+
+                            <div class="input_field">
+                                <label for="kwei">
+                                    Kwei / Babbage / Femtoether 
+                                    <span class="factor">(factor: 3)</span>
+                                </label>
+                                <input type="number" class="input" autocomplete="off" min="0" id="kwei" placeholder="Kwei">
+                            </div>
+
+                            <div class="input_field">
+                                <label for="mwei">
+                                    Mwei / Lovelace / Picoether
+                                    <span class="factor">(factor: 6)</span>
+                                </label>
+                                <input type="number" class="input" autocomplete="off" min="0" id="mwei" placeholder="Mwei">
+                            </div>
+
+                            <div class="input_field">
+                                <label for="gwei">
+                                    Gwei / Shannon / Nanoether / Nano 
+                                    <span class="factor">(factor: 9)</span>
+                                </label>
+                                <input type="number" class="input" autocomplete="off" min="0" id="gwei" placeholder="Gwei">
+                            </div>
+                            
+                            <div class="input_field">
+                                <label for="szabo">
+                                    Szabo / Microether/ Micro
+                                    <span class="factor">(factor: 12)</span>
+                                </label>
+                                <input type="number" class="input" autocomplete="off" min="0" id="szabo" placeholder="Szabo">
+                            </div>
+
+                            <div class="input_field">
+                                <label for="finney">
+                                    Finney / Milliether / Milli
+                                    <span class="factor">(factor: 15)</span>
+                                </label>
+                                <input type="number" class="input" autocomplete="off" min="0" id="finney" placeholder="Finney">
+                            </div>
+
+                            <div class="input_field">
+                                <label for="ether">
+                                    Ether 
+                                    <span class="factor">(factor: 18)</span>
+                                </label>
+                                <input type="number" class="input" autocomplete="off" min="0" id="ether" placeholder="Ether">
+                            </div>
+
+                            <div class="input_field">
+                                <label for="kether">
+                                    Kether / Grand 
+                                    <span class="factor">(factor: 21)</span>
+                                </label>
+                                <input type="number" class="input" autocomplete="off" min="0" id="kether" placeholder="Kether">
+                            </div>
+
+                            <div class="input_field">
+                                <label for="mether">
+                                    Mether 
+                                    <span class="factor">(factor: 24)</span>
+                                </label>
+                                <input type="number" class="input" autocomplete="off" min="0" id="mether" placeholder="Mether">
+                            </div>
+
+                            <div class="input_field">
+                                <label for="gether">
+                                    Gether
+                                    <span class="factor">(factor: 27)</span>
+                                </label>
+                                <input type="number" class="input" autocomplete="off" min="0" id="gether" placeholder="Gether">
+                            </div>   
+                            
+                            <div class="input_field">
+                                <label for="tether">
+                                    Tether
+                                    <span class="factor">(factor: 30)</span>
+                                </label>
+                                <input type="number" class="input" autocomplete="off" min="0" id="tether" placeholder="Tether">
+                            </div>   
+
+                        </div>
+                    </form>
+                </div>
+                
+            </article>
+        </main>
+        <footer>
+
+        </footer> 
+     </div>
+
+     <script src="app.js"></script>
+</body>
+</html>

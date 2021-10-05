@@ -1,0 +1,97 @@
+*{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+body{
+    background-color: #b1ebb1;
+    padding: 0 10px;
+    padding-top: 5px;
+}
+
+hr.seperator{
+    color: #e8f8bc;
+    margin-bottom: 10px;
+}
+
+.header h1{
+    padding-top: 15px;
+    color: teal;
+}
+
+.header button{
+    max-width: 300px;
+    width: 45%;
+    padding: 9px;
+    border: none;
+    font-weight: bold;
+    font-size: 18px;
+    margin: 5px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.header .inactive-btn{
+    background-color: #fff;
+    color: rgb(52, 185, 52);
+}
+
+.header .active-btn{
+    color: #fff;
+    background-color: rgb(52, 185, 52);
+}
+
+
+.form-wrapper, .header{
+    max-width: 900px;
+    width: 100%;
+    background-color:#fff;
+    margin: 5px auto;
+    padding: 30px;
+    box-shadow: 2px 2px 4px rgb(52, 185, 52);
+    border-radius: 5px;
+}
+.form-wrapper{
+    padding:25px;
+}
+.header{
+    text-align: center;
+    background-color: #fff;
+    box-shadow: 2px 2px rgb(52, 185, 52);
+    padding-bottom: 10px;
+}
+
+.form-wrapper .input_field{
+    margin-bottom: 15px;
+    display: flex;
+    align-items: center;
+}
+
+
+.form-wrapper .input_field label{
+    width: 515px;
+}
+
+.form-wrapper .input_field input{
+    max-width: 900px;
+    width: 100%;
+    outline: none;
+    border: 1px solid rgb(52, 185, 52);
+    padding: 8px 10px;
+    border-radius: 3px;
+    transition: all 0.3s ease;
+    caret-color: rgb(52, 185, 52);    
+}
+
+.factor{
+    font-size: 12px;
+}
+
+.form-wrapper .simple-form .input_field input{
+    max-width: 800px;
+}
+
+.form-wrapper .simple-form .input_field label{
+    max-width: 70px;
+}
