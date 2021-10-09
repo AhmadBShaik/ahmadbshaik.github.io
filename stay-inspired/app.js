@@ -16,6 +16,7 @@ function getRandomQuote(ep){
     }) 
     .catch(err => {
         document.getElementById("random-quote").innerHTML = `No Internet Connection...`;
+        document.getElementById("author").innerHTML = ``;
     })
 
 }
