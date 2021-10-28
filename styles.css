@@ -1,0 +1,397 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'EB Garamond', serif;
+}
+
+header .header{
+    background-color: #1C7C54;
+}
+header .header .container{
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.container{
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.link{
+    text-align: center;
+    color: #fff;
+    padding: .9rem;
+    margin: .0rem;
+}
+
+.link a{
+    text-decoration: none;
+    color: #fff;
+}
+
+.link a:hover{
+    text-decoration: none;
+    color: #f7dfb3;
+}
+
+body{
+    font-weight: 600;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+#skills{
+    font-size: 2em;
+}
+
+.projects-wrapper .container .projects .card .border-card button{
+    color: #3e7960;
+    font-size: 1.8rem;
+    background-color: #fff;
+    margin: .5rem;
+    padding: 5px;
+    border-radius: 5px;
+    box-shadow: 2px 2px 2px #adff2f;
+}
+
+.projects-wrapper .container .projects .card .border-card button:hover{
+    color: #fff;
+    /* font-weight: bold; */
+    background-color: rgb(111, 170, 22);
+    box-shadow: none;
+    border-radius: 5px;
+}
+
+
+.projects-wrapper, .coding-challenges-wrapper, .contact-wrapper, .resume-wrapper{
+    background-color: #fff;
+    color: #3e7960;
+    padding-top: 1.5rem;
+}
+
+.contact-wrapper{
+    padding-bottom: 1%;
+}
+
+.contact-wrapper .container .contact{
+    max-width: 700px;
+    margin:0px auto;
+}
+
+.contact-wrapper .container .contact .card .inner-flex-item{
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.container .contact-wrapper .contact .card{
+    display: flex;
+    justify-self: center;
+    flex-direction: column;
+    padding: 0;
+    padding: 0 2% 2% 2%;
+}
+
+.resume-wrapper .resume button:hover{
+    padding: 10px;
+    border-radius: 5px;
+    background-color:  rgb(138, 182, 72);
+    border: #fff solid 2px;
+    font-weight: bold;
+    color: #fff;
+    box-shadow: none;
+}
+
+.home{
+    color: #3e7960;
+    text-align: center;
+}
+
+.resume-wrapper{
+    text-align: center;
+}
+
+.card{
+    border-radius: 5px;
+    background-color: #fff;
+}
+
+.border-card{
+    margin:5px;
+    border-radius: 5px;
+    border: 1px solid green;
+    padding: 20px;
+    box-shadow: 2px 2px 6px rgb(138, 182, 72);
+    
+}
+
+main .home .card .home-content{
+    display: flex;
+    align-items: center;
+}
+
+main .home .card .home-content .home-content-text p{
+    font-size: 3rem;
+}
+
+.inner-flex-item, .resume-wrapper .resume button{
+    font-size: 2rem;
+}
+
+h2{
+    font-size: 2.5rem;
+    padding-bottom: 1rem;
+}
+
+.resume-wrapper .resume button{
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #fff;
+    border:  rgb(138, 182, 72) solid 2px;
+    font-weight: bold;
+    color:  rgb(138, 182, 72);
+    box-shadow: 2px 2px 2px rgb(138, 182, 72);
+}
+
+main .home .card .home-content .home-content-text .seperator{
+    display: none;
+}
+
+main .container .home .card .home-content .home-content-image img{
+    width:280px ;
+    height: 280px;
+    border: #336d12 solid .3em;
+    border-radius: 50%;
+    margin: .4rem .4rem;
+    flex-grow: 0;
+    flex-shrink: 0;
+}
+
+.container .projects .card, .container .coding-challenges .card{
+    padding: 0 2% 2% 2%;
+    color: #3e7960;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.container .projects .card, .container .resume .card{
+    padding: 0 2% 2% 2%;
+    color: #3e7960;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    /* padding-top: 1rem; */
+
+}
+
+.container .projects .card .inner-flex-item{
+    flex: 1 1 32%;
+    line-height: 1.2;    
+}
+
+
+#name{
+    color: rgb(214, 35, 74);
+    font-weight: bold;
+    font-family: 'Roboto Slab', serif;
+}
+
+.container .coding-challenges .card .inner-flex-item{
+    flex: 1 1 48%;
+    line-height: 1.4;
+}
+
+
+@media (max-width:992px){    
+ 
+    main .home .card .home-content .home-content-text p{
+        font-size: 2rem;
+        padding: .5rem;
+    }
+
+
+    .projects-wrapper .container .projects .card .border-card button{
+        font-size: 1.3rem;
+    }
+
+
+    .card{
+        padding: 2em;
+    }
+
+    main .home .card .home-content .home-content-text p{
+        font-size: 2.6rem;
+    }
+    
+    .inner-flex-item, .resume-wrapper .resume button{
+        font-size: 1.6rem;
+    }
+    
+    h2{
+        font-size: 2.2rem;
+    }
+}
+
+@media (max-width:768px){
+
+    main .container .home .card .home-content .home-content-image img{
+        width:280px ;
+        height: 280px;
+        border: #336d12 solid .3em;
+        border-radius: 50%;
+        margin: .4rem .4rem;
+    }
+
+    main .home .card .home-content .home-content-text .seperator{
+        display: block;
+        color: #c9f1d6;
+        margin-bottom: .9rem;
+        margin-top: .5em;
+        padding-top: 1%;
+    }
+    
+    main .home .card .home-content .home-content-text .seperator hr{
+        color: rgb(192, 212, 170);
+        margin: 0% 5%;
+    }
+    
+    main .home .card .home-content{
+        display: flex;
+        flex-direction: column;
+        
+    }
+    .container .projects .card{
+        /* line-height: 1.5; */
+        color: #3e7960;
+        padding:0 2% 1% 2%;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    
+    .container .projects .card .inner-flex-item{
+        flex: 1 1 48%;
+        
+    }
+    
+    .card{
+        padding:.5em;
+    }
+    
+    .projects-wrapper, .coding-challenges-wrapper, .contact-wrapper, .resume-wrapper{
+        padding-bottom: .1rem;        
+    }
+
+/*     
+    header .header .container{
+        display: flex;
+        flex-direction: column-reverse;
+    }
+     */
+    main .home .card .home-content .home-content-text p{
+        font-size: 2.4rem;
+    }
+    
+    .inner-flex-item, .resume-wrapper .resume button{
+        font-size: 1.4rem;
+    }
+
+    h2{
+        font-size: 2rem;
+    }
+
+}
+
+@media (max-width:576px){
+
+    header .header .container{
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    main .container .home .card .home-content .home-content-image img{
+        width:180px ;
+        height: 180px;
+        border: #336d12 solid .3em;
+        border-radius: 50%;
+        margin: .0rem .0rem;
+        /* margin-top: 0em; */
+    }
+
+    main .home .card .home-content{
+        display: flex;
+        flex-direction: column;
+    }
+
+    main .home .card .home-content .home-content-text .seperator{
+        margin-bottom: 0rem;
+        margin-top: .3rem;
+        
+    }
+
+    main .home .card .home-content .home-content-text .seperator hr{
+        margin: 0 6%;
+        
+    }
+
+    .container .projects .card{
+        padding: 0 2% 2% 2%;
+        line-height: 1.8;
+        color: #3e7960;
+        display: flex;
+        flex-direction: column;
+    }
+
+    main .home .card .home-content .home-content-text p{
+        font-size: 2rem;
+    }
+    
+    .inner-flex-item, .resume-wrapper .resume button{
+        font-size: 1.2rem;
+    }
+    
+    h2{
+        font-size: 1.8rem;
+    }
+
+
+    .projects-wrapper .container .projects .card .border-card button{
+        font-size: 1.1rem;
+    }
+
+}
+
+/* footer */
+html,body{
+    height: 100%;
+    margin: 0;
+} 
+
+.footer{
+    background-color: #1B512D;
+    
+}
+
+.wrapper{
+    min-height: 100%;
+    margin-bottom: -60px;
+}
+.wrapper::after{
+    content:"";
+    display: block;
+}
+
+.wrapper::after,footer{
+    height: 60px;
+}
+
+footer{
+    display:flex;
+    justify-content: center;
+}
+
+footer .fab,.far{
+    margin: 14px 20px;
+}
