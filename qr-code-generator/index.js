@@ -47,10 +47,14 @@ addBtn.addEventListener('click',() => {
 })
 function updateUI(){
     const submitBtn = document.getElementById('submit_btn')
+    
     if(addressList.length > 0){
         submitBtn.style.display = "block"
         document.getElementById("separator").style.display = "block"
 
+    }else{
+        submitBtn.style.display = "none"
+        document.getElementById("separator").style.display = "none"
     }
 
     const rootElement = document.getElementById('address_list')
