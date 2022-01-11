@@ -162,7 +162,9 @@ function updateUI(){
 
                 const url = URLify(baseURL, address)
                 
-                if(completeURLList.includes(url) && url !== completeURLList[i] ){
+                if(address === "" ){
+                    inputMessage.innerText = "*This field is required"
+                }else if(completeURLList.includes(url) && url !== completeURLList[i] ){
                     inputMessage.innerText = "Address already exists!"
                 }else{
                     addressList[i] = inputTag.value
