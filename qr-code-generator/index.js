@@ -257,8 +257,6 @@ downloadBtn.addEventListener('click', () => {
     for(let c in addressList){
 
         const image = document.getElementById(addressList[c]).toDataURL('image/png')
-        console.log(image)
-        console.log(addressList[c])
 
         const fileName = addressList[c]
         const canv = document.createElement("a");
