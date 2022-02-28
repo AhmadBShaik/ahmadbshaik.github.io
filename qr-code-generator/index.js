@@ -221,7 +221,8 @@ submitBtn.addEventListener('click',() => {
         canvasCard.classList.add('card')
         
         const canvas = document.createElement('canvas')
-        canvas.id = completeURLList[i]
+        canvas.id = addressList[i]
+        // console.log(addressList[i])
         canvas.style.margin = "auto"
         
  
@@ -253,12 +254,11 @@ submitBtn.addEventListener('click',() => {
 
 
 downloadBtn.addEventListener('click', () => {
-    for(let c in completeURLList){
+    for(let c in addressList){
 
-        // console.log(canv)
-        const image = document.getElementById(completeURLList[c]).toDataURL('image/png')
-        // console.log(image)
-        // console.log(addressList[c])
+        const image = document.getElementById(addressList[c]).toDataURL('image/png')
+        console.log(image)
+        console.log(addressList[c])
 
         const fileName = addressList[c]
         const canv = document.createElement("a");
