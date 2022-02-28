@@ -1,6 +1,7 @@
 const addBtn = document.getElementById("add_btn")
 
 const submitBtn = document.getElementById("submit_btn")
+const downloadBtn = document.getElementById("download_btn")
 
 const addressList = []
 const completeURLList = []
@@ -14,11 +15,21 @@ addBtn.addEventListener('click',() => {
     
     const addressInputTag = document.getElementById("address")
     
-    const url = URLify(baseURL, address)
+    const url = URLify(baseURL, toIndividualAddresses(address))
     if(baseURL !== "" && !(baseURL.includes(" ")) && address !== "" && !(completeURLList.includes(url))){
         
         completeURLList.push(url)
-        addressList.push(address)
+        // console.log()
+
+
+        addressList.push(
+            url.split("?")[1].split('source=')
+                .filter(word => word!=="")
+                .map(word => word.replace("&",""))
+                .map(word => word.split("+").join(" "))
+                .join(" | ")
+            )
+            
         addressMessage.innerText = ""
         addressInputTag.value = ""
         addressInputTag.focus()    
@@ -47,7 +58,6 @@ addBtn.addEventListener('click',() => {
 })
 function updateUI(){
     const submitBtn = document.getElementById('submit_btn')
-    
     if(addressList.length > 0){
         submitBtn.style.display = "block"
         document.getElementById("separator").style.display = "block"
@@ -67,7 +77,7 @@ function updateUI(){
         const action_btns = document.createElement('div')
         const view_qr_btn_wrapper = document.createElement('div')
         const edit_delete_btn_wrapper = document.createElement('div')
-        const view_qr_btn = document.createElement('button')
+        // const view_qr_btn = document.createElement('button')
         const edit_btn = document.createElement('button')
         const delete_btn = document.createElement('button')
 
@@ -82,7 +92,7 @@ function updateUI(){
         action_btns.classList.add('action_btns')
 
         
-        content.innerHTML = addressList[i]
+        content.innerHTML = addressList[i].split('|').join(',\n')
 
         
         action_btns.appendChild(view_qr_btn_wrapper)
@@ -90,11 +100,11 @@ function updateUI(){
         
 
 
-        view_qr_btn_wrapper.appendChild(view_qr_btn)
+        // view_qr_btn_wrapper.appendChild(view_qr_btn)
         // view_qr_btn.innerHTML = "View QR Code"
-        view_qr_btn.innerHTML = ""
-        view_qr_btn.classList.add('btn')
-        view_qr_btn.classList.add('view_qr_btn')
+        // view_qr_btn.innerHTML = ""
+        // view_qr_btn.classList.add('btn')
+        // view_qr_btn.classList.add('view_qr_btn')
 
 
         edit_delete_btn_wrapper.appendChild(edit_btn)
@@ -110,9 +120,9 @@ function updateUI(){
         delete_btn.classList.add('delete_btn')
 
 
-        view_qr_btn.addEventListener('click',()=>{
-            // console.log(i)
-        })
+        // view_qr_btn.addEventListener('click',()=>{
+        //     // console.log(i)
+        // })
 
 
 
@@ -157,11 +167,11 @@ function updateUI(){
 
             changeBtn.addEventListener('click',() => {
                 
-                const baseURL = (document.getElementById('base_url').value).trim()
+                const baseURL = (document.getElementById('base_url').value).trim().split('?')[0]
                 const address = (inputTag.value).trim()
 
-                const url = URLify(baseURL, address)
-                
+                const url = URLify(baseURL, toIndividualAddresses(address))
+
                 if(address === "" ){
                     inputMessage.innerText = "*This field is required"
                 }else if(completeURLList.includes(url) && url !== completeURLList[i] ){
@@ -201,17 +211,20 @@ submitBtn.addEventListener('click',() => {
         const canvasAddress = document.createElement('p')
         const community = document.createElement('p')
         
-        const a = completeURLList[i].split('?')[0].split('/').filter(word => word !== "" )
-        console.log(a[a.length-1])
-        community.innerText = a[a.length-1]
+        community.innerText = parentOfAddress(completeURLList[i])
+        community.style.textDecoration = "underline"
+        community.style.color = "#f005ff"
 
-        canvasAddress.innerText = addressList[i]
-        
+        canvasAddress.innerText = addressList[i].split("|").join("\n")
+        canvasAddress.style.color = "#0488f1"
+
         canvasCard.classList.add('card')
         
         const canvas = document.createElement('canvas')
+        canvas.id = completeURLList[i]
         canvas.style.margin = "auto"
-
+        
+ 
         canvasAddress.style.textAlign = "center"
         community.style.textAlign = "center"
         
@@ -236,4 +249,23 @@ submitBtn.addEventListener('click',() => {
             
     })
 
+})
+
+
+downloadBtn.addEventListener('click', () => {
+    for(let c in completeURLList){
+
+        // console.log(canv)
+        const image = document.getElementById(completeURLList[c]).toDataURL('image/png')
+        // console.log(image)
+        // console.log(addressList[c])
+
+        const fileName = addressList[c]
+        const canv = document.createElement("a");
+        canv.setAttribute("href", image);
+        canv.setAttribute("download", fileName);
+        document.body.appendChild(canv);
+        canv.click();
+        canv.remove();
+    }
 })
